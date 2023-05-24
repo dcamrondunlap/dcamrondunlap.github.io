@@ -1,0 +1,152 @@
+/* General */
+
+body {
+    background-image: radial-gradient(circle, midnightblue, black);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+}
+
+.contact-info li {
+    float: left;
+    margin: 5px;
+}
+
+/* Main Grid */
+
+.container {
+    display: grid;
+    grid-template-areas: "head head"
+                          "nav nav"
+                          "about about-info"
+                          "contact contact-info"
+                          "skills skills-info"
+                          "projects projects-info"
+                          "footer footer";
+    grid-template-columns: 3, 1fr;
+    grid-template-rows: 300px 50px 12.50em auto 500px 500px 50px;
+     margin: auto;
+     max-width: auto;
+    max-height: auto;
+    grid-gap: .75%;
+  }
+
+/* header and image */
+
+header {
+    border: 1px black;
+    border-style: solid;
+    grid-area: head;
+    color: silver;   
+}
+
+ header { 
+    background-image: url(https://github.com/Numbah6/Portforlio/assets/89164785/3abc61d2-ea23-4535-be6d-c73e277128ba);
+    height: auto;
+    width: 200%;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    grid-area: head;
+}
+
+/* Navigation */
+
+nav {
+    grid-area: nav;
+    border-style: solid;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    color: silver;
+    justify-content: space-around;
+}
+
+nav a:hover {
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+/* Info */
+
+.about {
+    border: 4px black;
+    grid-area: about;
+    border-style: solid;
+    color: silver;
+    text-align: center;
+}
+
+.about-info {
+    border: 4px black;
+    border-style: solid;
+    grid-area: about-info;
+    color: silver;
+    text-align: center;
+}
+
+.contact {
+    border: 4px black;
+    border-style: solid;
+    grid-area: contact;
+    color: silver;
+    text-align: center;
+}
+
+.contact-info {
+    border: 4px black;
+    border-style: solid;
+    grid-area: contact-info;
+    color: silver;
+}
+
+.skills {
+    border: 4px black;
+    border-style: solid;
+    grid-area: skills;
+    color: silver;
+    text-align: center;
+}
+
+.skills-info {
+    border: 4px black;
+    border-style: solid;
+    grid-area: skills-info;
+    color: silver;
+    list-style: none;
+}
+
+.projects {
+    border: 4px black;
+    border-style: solid;
+    grid-area: projects;
+    color: silver;
+    text-align: center;
+}
+
+.projects-info {
+    border: 4px black;
+    border-style: solid;
+    grid-area: projects-info;
+    color: silver;
+}
+
+footer {
+    border: 4px black;
+    border-style: solid;
+    grid-area: footer;
+    color: silver;
+    text-align: center;
+}
