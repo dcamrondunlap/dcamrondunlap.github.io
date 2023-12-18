@@ -5,82 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/grid-style.css">
-    <title>D'Camron Dunlap's Portfolio</title>
-    
+    <link rel="stylesheet" href="./font-mfizz-2.4.1/font-mfizz.css">
+    <script src="https://kit.fontawesome.com/1808e31d4a.js" crossorigin="anonymous"></script>
+    <title>D'Camron Dunlap</title>
+
 </head>
 
 <body>
-    <div class="container">
-        <header>Portfolio
-           <img src="./assets/images/IMG_2378.jpg">
-        </header>
-        <nav>
-         <ul>
-             <li><a href="#">About</a></li>
-             <li><a href="#">Contact</a></li>
-             <li><a href="#">Skills</a></li>
-             <li><a href="#">Projects</a></li>
-         </ul>
+
+    <div class="shape-container">
+        <div class="outline-box">
+            <div class="content">
+                <div class="name-links">
+                    <h1>D'Camron Dunlap</h1>
+    <h2>FullStack Developer</h2>
+
+    <nav id="navigation">
+        <ul>
+            <li><a href="#Home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#Info" onclick="showSection('info')">Info</a></li>
+            <li><a href="#Projects" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#Contact" onclick="showSection('contact')">Contact</a></li>
+        </ul>
     </nav>
-     
-     <section class="about">
-         <h1 class="section-title">D'Camron Dunlap</h1>
-         <p class="section-description"> Aspiring Software Developer</p>
-     </section>
-     
-     <section class="about-info">
-         <p>I am a aspiring Software Developer, who has taken his first step forward, by enrolling in the We Can Code It IT bootcamp, As well as participating in the Amazon Technical Academy Java training program.</p>
-         <p>I enjoy all things tech, because it's one of the few things left in the world, where not only the possibilities, but the learning potential is infinite.</p>
-         <p>A dream is to one day have the opportunity to push something to it's limits to see what humanity is capable of in the realm of technology.</p>
-     </section>
-     
-     <section class="contact">
-         <h1 class="section-title">Contact</h1>
-         <p class="section-description"></p>
-     </section>
-     
-     <section class="contact-info">
-         <ul>
-             <li><a href=https://github.com/Numbah6 float: left target="_blank"> My Github</a></li>
-             <li><a href=https://www.linkedin.com/feed/ target="_blank"> My Linkedin</a></li>
-             <li>  
-                 <address>
-                     <a href="mailto:camron153@gmail.com">Email me</a>
-                 </address>
-              </li>
-         </ul>
-         
-     </section>
-     
-     <section class="skills">
-         <h1 class="section-title">Skills</h1>
-         <p class="section-description"></p>
-     </section>
-     
-     <section class="skills-info">
-         <ul>
-             <li>Hardworking</li>
-             <li>Front and Back end development</li>
-             <li>Java</li>
-             <li>Leadership</li>
-             <li>Team player</li>
-             <li>Adaptable</li>
-             <li>Great Communication</li>
-         </ul>
-     </section>
-     
-     <section class="projects">
-         <h1 class="section-title">Projects</h1>
-         <p class="section-description"></p>
-     </section>
-     
-     <section class="projects-info">
-         <ul>
-            <li><a href="https://numbah6.github.io/" target="_blank">Direct Link to My Repositories</a></li> 
-         </ul>
-     </section>
-     
-     <footer>Thank you for taking the time to read my portfolio, and I hope you have a great rest of your day!</footer>
-     </div>
+            </div>
+
+    <section id="home" class="section visible">
+        <span>Born in Toledo,Ohio</span>
+        <span>Resides in Fremont,Ohio.</span>
+        <span>After a whimsical decision,</span>
+        <span>I've come to truly enjoy all</span>
+        <span>aspects that software </span>
+        <span>development has brought me.</span>
+        <span>If you fail,</span>
+        <span>then next time fail better.</span>
+        <span>Just keep getting</span>
+        <span>back up.</span>
+    </section>
+
+    <section id="info" class="section">
+        <img src="./assets/images/IMG_2378.jpg" alt="profile-picture">
+        <h1>Stacks</h1>
+        <div class="icons">
+            <i class="icon-html5"></i>
+            <i class="icon-css3-alt"></i>
+            <i class="icon-mongodb"></i>
+            <i class="icon-reactjs"></i>
+            <i class="icon-nodejs"></i>
+            <i class="icon-mysql"></i>
+            <i class="icon-aws"></i>
+            <i class="icon-postgres"></i>
+            <i class="fab fa-"></i>
+            <i class="icon-javascript"></i>
+            <i class="icon-java"></i>
+
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+
+        <nav>
+            <ul>
+                <li><a href="https://donut-clicker-main-av2piemii-dcamrondunlaps-projects.vercel.app/" target="_blank">Donut Clicker</a></li>
+            </ul>
+        </nav>
+
+    </section>
+
+    <section id="contact" class="section">
+
+        <h2>Let's Chat!</h2>
+
+        <div class="buttons-container">
+            <button class="contact-button" onclick="window.open('https://github.com/dcamrondunlap','_blank')">Github</button>
+
+        <button class="contact-button" onclick="window.open('https://www.linkedin.com/feed/','_blank')">Linkedin</button>
+
+        <button class="contact-button" onclick="window.open('mailto:camron153@gmail.com','_blank')">Email</button>
+        </div>
+    </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

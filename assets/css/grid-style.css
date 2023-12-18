@@ -1,152 +1,245 @@
 /* General */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap');
+* {
+    background-color: #0c3356;
+}
 
 body {
-    background-image: radial-gradient(circle, midnightblue, black);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
-}
-
-ul {
-    list-style: none;
-}
-
-.contact-info li {
-    float: left;
-    margin: 5px;
-}
-
-/* Main Grid */
-
-.container {
-    display: grid;
-    grid-template-areas: "head head"
-                          "nav nav"
-                          "about about-info"
-                          "contact contact-info"
-                          "skills skills-info"
-                          "projects projects-info"
-                          "footer footer";
-    grid-template-columns: 3, 1fr;
-    grid-template-rows: 300px 50px 12.50em auto 500px 500px 50px;
-     margin: auto;
-     max-width: auto;
-    max-height: auto;
-    grid-gap: .30%;
-  }
-
-/* header and image */
-
-header {
-    border: 1px black;
-    border-style: solid;
-    grid-area: head;
-    color: silver;   
-}
-
- img {
-    padding: 5px;
-    width: 150px;
-    border-radius: 50px;
-}
-
-
-
-
-
-/* Navigation */
-
-nav {
-    grid-area: nav;
-    border-style: solid;
-}
-
-nav ul {
+    margin: 0;
     padding: 0;
-    width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    background-color: #11497c;
 }
 
-nav a {
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.section {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.shape-container {
+    width: 90%;
+    height: 90vh;
+    border: 1px solid black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.outline-box {
+    height: 90%;
+    width: 90%;
+    padding: 100px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+
+/*Name Links*/
+.name-links {
+    position: absolute;
+    top: 10px;
+    left:10px;
+    color: #b4bec8;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+#navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navigation li {
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+#navigation a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #b4bec8;
+
+}
+
+#navigation a:hover,
+#navigation a.active {
+    font-weight: bold;
+    color: #b4bec8;
+}
+
+/*Home section*/
+#home {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: justify;
+}
+
+#home span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #b4bec8;
+}
+
+/*Info Section*/
+#info {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     text-align: center;
-    color: silver;
-    justify-content: space-around;
 }
 
-nav a:hover {
-    text-transform: uppercase;
-    font-size: 1em;
+#info img {
+    border-radius: 10px;
+    display: block;
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+
 }
 
-/* Info */
-
-.about, .about-info {
-    border: 4px black;
-    border-style: solid;
-    color: silver;
+#info h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #b4bec8;;
 }
 
-.about {
-    grid-area: about;
+#info .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+#info .icons i {
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #b4bec8;
+}
+
+/*Projects Section*/
+#projects {
+    position: absolute;
+    bottom: 200px;
+    right: 20px;
+}
+
+#projects nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#projects nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#projects nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #b4bec8;
+}
+
+/*Contact Section*/
+#contact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.about-info {
-    grid-area: about-info;
-    text-align: center;
+#contact h2 {
+    margin-bottom: 20px;
+    color: #b4bec8;
 }
 
-.contact, .contact-info {
-    border: 4px black;
-    border-style: solid;
-    color: silver;
+#contact .buttons-container {
+    display: inline;
 }
 
-.contact {
-    grid-area: contact;
-    text-align: center;
+#contact .contact-button {
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #b4bec8;
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.contact-info {
-    grid-area: contact-info;
+#contact .contact-button:hover {
+    background-color: #11497c;
 }
 
-.skills, .skills-info {
-    border: 4px black;
-    border-style: solid;
-    color: silver;
+#contact.visible {
+    display: flex;
 }
 
-.skills {
-    grid-area: skills;
-    text-align: center;
-}
+/*Small Screens*/
+@media only screen and (max-width: 600px) {
+    .shape-container {
+        width: 100%;
+    }
 
-.skills-info {
-    grid-area: skills-info; 
-}
+    .outline-box {
+        padding: 20px;
+    }
 
-.projects, .projects-info {
-    color: silver;
-    border: 4px black;
-    border-style: solid;
-    
-}
+    #home,
+    #info,
+    #projects,
+    #contact {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 20px;
+    }
 
-.projects {
-    grid-area: projects;
-    text-align: center;
-} 
+    #home span {
+        font-size: 16px;
+    }
 
-.projects-info {
-    grid-area: projects-info;
-}
+    #info img {
+        width: 100%;
+        max-width: 300px;
+    }
 
-footer {
-    border: black;
-    border-style: solid;
-    grid-area: footer;
-    color: silver;
-    text-align: center;
-    padding: 15px;
+    #info .icons i {
+        font-size: 16px;
+    }
+
+    #projects nav a {
+        font-size: 16px;
+    }
 }
