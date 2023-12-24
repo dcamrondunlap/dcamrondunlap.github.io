@@ -35,10 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
     container.appendChild(renderer.domElement);
 
     var raindrops = [];
-  var material = new THREE.MeshBasicMaterial({ color: 0xADB7C0 });
+  var material = new THREE.MeshBasicMaterial({
+    color: 0xADB7C0,
+    opacity: 0.7,
+    transparent: true,
+  });
 
   for (var i = 0; i < 1000; i++) {
-  var raindropGeometry = new THREE.BoxGeometry(0.05, 0.2, 0.05);
+  var raindropGeometry = new THREE.BoxGeometry(0.01, 0.2, 0.05);
   var raindrop = new THREE.Mesh(raindropGeometry, material);
 
   raindrop.position.set(
@@ -55,10 +59,10 @@ document.addEventListener('DOMContentLoaded', function () {
     requestAnimationFrame(animate);
 
     for (var i = 0; i < raindrops.length; i++) {
-      raindrops[i].position.y -= 0.03;
+      raindrops[i].position.y -= 0.08;
 
       if (raindrops[i].position.y < -5) {
-          raindrops[i].position.y = 20;
+          raindrops[i].position.y = 5;
       }
     }
 
