@@ -16,7 +16,9 @@ function showSection (sectionId) {
 
 document.addEventListener('DOMContentLoaded', function () {
   // Set up Three.js scene
+  console.log('Before creating scene')
   var scene = new THREE.Scene();
+  console.log('After creating scene')
 
   // Set up camera
   var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
