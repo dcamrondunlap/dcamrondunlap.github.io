@@ -120,12 +120,15 @@ h2 {
     z-index: 1;
 }
 
-#info img {
+#info .profile-picture{
     border-radius: 10px;
     display: block;
-    width: 200px;
+    width: 20%;
     height: auto;
     margin-bottom: 10px;
+    position: relative;
+    top: 25%;
+    left: 40%;
 
 }
 
@@ -137,14 +140,22 @@ h2 {
 
 #info .icons {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 5px;
+    margin-left: 40%;
+
 }
 
 #info .icons i {
     margin-bottom: 8px;
+    margin-right: 10px;
     font-size: 20px;
+    color: #b4bec8;
+}
+
+#info .About-Me {
+    margin-bottom: 8px;
+    margin-right: 3px;
+    font-size: 25px;
     color: #b4bec8;
 }
 
@@ -217,7 +228,8 @@ h2 {
 }
 
 /*Small Screens*/
-@media only screen and (max-width: 575.98px) and (max-height:932){
+@media screen and (max-width: 575px) {
+    /* Your styles for small screens here */
     .shape-container {
         width: 100%;
         height: auto;
@@ -234,12 +246,12 @@ h2 {
 
     .name-links {
         position: absolute;
-    top: 5px;
-    left: 5px;
-    color: #b4bec8;
-    z-index: 2;
-    background-color: rgba(180, 190, 200, 0.5); /* Adjust the color and opacity */
-    padding: 10px;
+        top: 5px;
+        left: 5px;
+        color: #b4bec8;
+        z-index: 2;
+        background-color: rgba(180, 190, 200, 0.5); /* Adjust the color and opacity */
+        padding: 10px;
     }
 
     h2 {
@@ -248,14 +260,22 @@ h2 {
         z-index: 2;
     }
 
-    #home,
+    /* #home,
     #info,
-    #projects,
-    #contact {
+    #projects {
         position: relative;
         transform: none;
         width: 100%;
         margin-top: 10px;
+    } */
+
+    #home {
+        position: relative;
+        text-align: center;
+        height: 50%;
+        margin-top: 75%;
+        margin-left: 40%;
+        font-size: 30px;
     }
 
     #home span {
@@ -265,33 +285,63 @@ h2 {
     }
 
     #info {
-        position: absolute;
-    top: 30px;
-    right: 62px;
-    text-align: center;
-    margin-top: 62px;
-    z-index: 1;
-    background-color: rgba(180, 190, 200, 0.5); /* Adjust the color and opacity */
-    padding: 20px;
+        position: relative;
+        top: 30px;
+        right: 62px;
+        text-align: center;
+        margin-top: 62px;
+        z-index: 1;
+        background-color: rgba(180, 190, 200, 0.5); /* Adjust the color and opacity */
+        padding: 20px;
     }
 
     #info img {
         border-radius: 10px;
-    display: block;
-    width: 200px;
-    height: auto;
-    margin-bottom: 10px;
-    opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        opacity: 1;
+    }
 
+    #info .icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
     }
 
     #info .icons i {
-        font-size: 14px;
+        font-size: 10px;
         z-index: 2;
+
+    }
+
+    #info .About-Me {
+        display: block;
+        justify-content: space-around;
+        font-size: 10px;
+    }
+
+    #projects {
+        position: relative;
+        text-align: center;
+        height: auto;
+        margin-top: 75%;
+        margin-left: 5%;
+        font-size: 30px;
     }
 
     #projects nav a {
         font-size: 14px;
+    }
+
+    #contact {
+        position: relative;
+        height: 50%;
+        margin-top: 75%;
+        margin-left: 0%;
+        font-size: 30px;
     }
 }
 
