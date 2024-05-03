@@ -120,7 +120,7 @@ h2 {
     z-index: 1;
 }
 
-#info .profile-picture{
+/* #info .profile-picture{
     border-radius: 10px;
     display: block;
     width: 20%;
@@ -130,7 +130,7 @@ h2 {
     top: 25%;
     left: 40%;
 
-}
+} */
 
 #info h1 {
     text-align: center;
@@ -250,7 +250,6 @@ h2 {
         left: 5px;
         color: #b4bec8;
         z-index: 2;
-        background-color: rgba(180, 190, 200, 0.5); /* Adjust the color and opacity */
         padding: 10px;
     }
 
@@ -271,6 +270,7 @@ h2 {
 
     #home {
         position: relative;
+        background: none;
         text-align: center;
         height: 50%;
         margin-top: 75%;
@@ -287,21 +287,16 @@ h2 {
     #info {
         position: relative;
         top: 30px;
-        right: 62px;
+        justify-content: center;
+        margin-left: 15%;
         text-align: center;
         margin-top: 62px;
         z-index: 1;
-        background-color: rgba(180, 190, 200, 0.5); /* Adjust the color and opacity */
         padding: 20px;
     }
 
-    #info img {
-        border-radius: 10px;
-        display: block;
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-        opacity: 1;
+    #info .info-title {
+        margin-left: 10%;
     }
 
     #info .icons {
@@ -319,8 +314,9 @@ h2 {
 
     #info .About-Me {
         display: block;
-        justify-content: space-around;
+        justify-content: center;
         font-size: 10px;
+        margin-left: 30%;
     }
 
     #projects {
